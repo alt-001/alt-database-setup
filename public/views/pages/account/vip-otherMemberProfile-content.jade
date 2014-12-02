@@ -1,0 +1,63 @@
+include partials/vip-top
+.col-xs-3
+  include partials/vip-sidebar-other
+.col-xs-9
+  #vipOtherMemberProfileContent(ng-controller="accountCtrl")
+    h4.col-xs-12 Recent news
+    .updates
+      .lists
+        .col-xs-3.media-info
+          .thumbnail(ng-repeat="person in people | orderBy:random | limitTo:quantity1") 
+            img.media-object(ng-src='{{person.img}}')
+            .caption
+              h5.name
+                a(href="/account/otherprofile-connected" style="color:black;") {{person.name}}
+              p.role
+                {{person.role}}
+        .col-xs-3.media-info
+          .thumbnail(ng-repeat="person in people | orderBy:random | limitTo:quantity1") 
+            img.media-object(ng-src='{{person.img}}')
+            .caption
+              h5.name
+                a(href="/account/otherprofile-connected" style="color:black;") {{person.name}}
+              p.role
+                {{person.role}}
+              span.connection 
+          p.duration
+            | 1 day ago
+        .col-xs-3.media-info
+          .thumbnail(ng-repeat="person in people | orderBy:random | limitTo:quantity1") 
+            img.media-object(ng-src='{{person.img}}')
+            .caption
+              h5.name
+                a(href="/account/otherprofile-connected" style="color:black;") {{person.name}}
+              p.role
+                {{person.role}}
+        .col-xs-3.media-info
+          .thumbnail(ng-repeat="product in product | orderBy:random | limitTo:quantity1") 
+            img.media-object(ng-src='{{product.img}}')
+            .caption
+              h5.name
+                {{product.name}}
+              p.role
+                |{{product.brand}}
+              span.likes
+          p.duration
+            | 1 day ago
+    .clearfix
+    .alert-msg
+      | Sorry you can't see recent news unless other member connects with you
+      .clearfix
+      button.btn.invite-btn(type='button' data-toggle="modal" data-target="#myModal") Invite to Connect 
+      button.btn.back-btn(type='button') Back to Recent News
+    #myModal.modal.fade(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button" data-dismiss="modal")
+              span(aria-hidden="true") &times;
+              span.sr-only Close
+            h4#myModalLabel.modal-title Send invitation
+          .modal-footer
+            button.btn.btn-default(type="button" data-dismiss="modal") Close
+            button.btn.btn-primary(type="button") Submit

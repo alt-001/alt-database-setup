@@ -1,0 +1,140 @@
+#filters {
+  bottom: -135px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 185px;
+  padding: 25px 0;
+  z-index: 128;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+#filters >div {
+  display: block;
+  height: 140px;
+  border-left: 1px solid #ddd;
+}
+#filters >div padding-left 15px {
+  padding-right: 15px;
+}
+#filters >div:first-child {
+  border: none;
+}
+#filters #filterHandle {
+  width: 100%;
+  position: absolute;
+  top: -20px;
+  height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+#filters #filterHandle .text {
+  color: #3d3d3d;
+  font-family: 'PT Sans';
+  font-weight: 700;
+  font-size: 0.75em;
+  margin: 3px auto 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 38px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: block;
+  height: 20;
+  padding-top: 5px;
+  width: 75px;
+  cursor: point;
+}
+#filters input[type="radio"] {
+  display: none;
+}
+#filters .filter-button {
+  background-color: rgba(255,255,255,0);
+  border: 4px solid #fff;
+  border-radius: 8px;
+  color: #5a5a5a;
+  display: table;
+  font-family: "PT Sans", "source sans pro";
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 60%;
+  font-size: 12px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+#filters .filter-button.gender {
+  height: 65px;
+  margin-bottom: 11px;
+  min-width: 85%;
+  width: calc(100% - 30px);
+}
+#filters .filter-button.type,
+#filters .filter-button.order {
+  height: 40px;
+  margin: 0 0 11px 15px;
+  width: 82%;
+}
+#filters .filter-button:hover,
+#filters .filter-button.active {
+  background-color: #fff;
+  border: 4px solid #b4b4b4;
+  box-shadow: 0 5px 0 #dadada;
+  color: #575757;
+}
+#filters .filter-button-small {
+  font-size: 9px;
+}
+#filters .colour {
+  text-indent: -99999px;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  margin: 13px 18px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+#filters .colour:hover,
+#filters .colour.active {
+  box-shadow: 0px 4px 0px 1px #ababab;
+}
+#filters .misc {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#filters .misc .goexplore {
+  font-size: 14px;
+  background-color: #656565;
+  border: 4px solid #b4b4b4;
+  border-radius: 8px;
+  color: #fff;
+  font-family: "pt-sans", "source sans pro";
+  font-weight: 600;
+  height: 91px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  display: table;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+#filters .misc .goexplore:hover,
+#filters .misc .goexplore.active {
+  background-color: #000;
+  box-shadow: 0 5px 0 #dadada;
+}
+#filters .child {
+  display: table-cell;
+  vertical-align: middle;
+}
+#filters .prefer {
+  color: #858585;
+  font: italic 400 0.75em/1.38 Helvetica;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 20px;
+}

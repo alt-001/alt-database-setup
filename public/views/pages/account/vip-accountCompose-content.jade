@@ -1,0 +1,18 @@
+include partials/vip-top
+.col-xs-3
+  include partials/vip-sidebar
+.col-xs-9
+  include partials/vip-top-sub
+  #vipAccountComposeContent
+    form
+      h4.title
+        | New Message
+      .col-xs-12
+        input(type="text" placeholder="To").col-xs-6
+      .col-xs-12
+        input(type="text" placeholder="Enter a subject").col-xs-6
+      .col-xs-12
+        textarea(placeholder="Type a message").col-xs-6
+      .btn-group
+        button(type="submit").send Send
+        button Cancel

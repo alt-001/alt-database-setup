@@ -1,0 +1,44 @@
+include partials/vip-top
+.col-xs-3
+  include partials/vip-sidebar
+.col-xs-9
+  #vipRecentNewsContent(ng-controller="accountCtrl")
+    .top-bar
+      .col-xs-4
+        form(ng-model="vipSort")
+          select 
+            option(value="today") today
+            option(value="this week") this week
+            option(value="this month") this month
+          select(onchange="location = this.options[this.selectedIndex].value;")
+            option(value="/account/new-member") new member
+            option(value="/account/recentnews") connected
+      .col-xs-8
+        h5.col-xs-5.other-profile  Back to Recent News
+        form(ng-model="vipSearch")
+          .col-xs-7.pull-right
+            input.search(type='text' placeholder='Search').col-xs-10
+            button(type="submit").addon.col-xs-2
+              span.glyphicon.glyphicon-search 
+    .updates
+      .lists
+        .wrapper(ng-repeat="person in people | orderBy:random")
+          .col-xs-3.media-info
+            .thumbnail
+              img.media-object(ng-src='{{person.img}}')
+              .caption
+                h5.name
+                  a(href="/account/otherprofile-connected") {{person.name}}
+                p.role
+                  | {{person.role}}
+          .col-xs-3.media-info
+            .thumbnail
+              img.media-object(ng-src='/assets/images/pro/thumnail7.jpg')
+              .caption
+                h5.name
+                  | a lovely thing
+                p.role
+                  | &nbsp;&nbsp;
+            span.connection 
+            p.duration
+              | 1 day ago

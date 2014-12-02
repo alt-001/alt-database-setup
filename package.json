@@ -1,0 +1,41 @@
+{
+  "name": "ALT",
+  "version": "0.0.0",
+  "description": "A Lovely Thing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.3.x"
+  },
+  "dependencies": {
+    "express": "3.4.0",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "*",
+    "mongoose": "3.6.19",
+    "passport": "0.1.17",
+    "passport-local": "0.1.6",
+    "bcrypt-nodejs": "*",
+    "socket.io": "0.9.6",
+    "connect": "~2.15.0"
+  },
+  "author": "Boringtao",
+  "license": "BSD-2-Clause",
+  "subdomain": "alt",
+  "os": "sunos",
+  "bundledDependencies": [
+    "bcrypt-nodejs",
+    "connect",
+    "express",
+    "jade",
+    "mongoose",
+    "nib",
+    "passport",
+    "passport-local",
+    "stylus"
+  ]
+}

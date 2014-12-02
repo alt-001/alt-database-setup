@@ -1,0 +1,82 @@
+#filters
+  #filterHandle
+    .text 
+      | filter
+  .col-xs-1
+    form(ng-controller="filterCtrl")
+      - var filterGenderOptions = [{value: "x", text: "Man"}, {value: "y", text: "Woman"}]
+      each val in filterGenderOptions
+        label.filter-button.gender
+          .child
+            input(ng-model="filterService.activeFilters.gender" type="radio" name="filter" value="#{val.value}" )
+            | #{val.text}
+   .col-xs-3
+    form(ng-controller="filterCtrl")
+     - var filterTypeOptions = [{value: "shoe", text: "Shoes"}, {value: "accessory", text: "Accessories"}, {value: "bag", text: "Bags"}, {value: "jewelly", text: "Jewelly"}, {value: "appeal", text: "Appeal"}, {value: "misc", text: "Other misc"}]
+      each val in filterTypeOptions
+        .col-xs-6
+          label.filter-button.type
+            .child
+              input(ng-model="filterService.activeFilters.type" type="radio" name="filter" value="#{val.value}")
+              | #{val.text}
+   .col-xs-2
+    form(ng-controller="filterCtrl")
+      - var filterColourOptions = [{value: "blue", text: "#01D4FF"}, {value: "red", text: "#F9C5E3"}, {value: "black", text: "#000"}, {value: "green", text: "#AEF5B0"}, {value: "red", text: "#FAB6B6"}, {value: "blue", text: "#DADADA"}, {value: "black", text: "#FAE4AD"}, {value: "green", text: "#ADCCFA"}, {value: "blue", text: "#D8CAB8"}]
+      each val in filterColourOptions
+        .col-xs-4
+          label.colour(style="background-color: #{val.text}")
+            input(ng-model="filterService.activeFilters.color" type="radio" name="filter" value="#{val.value}")
+            | #{val.text}
+   .col-xs-3
+    form
+      - var sortOptions = [{value: "-id", text: "Most recent"}, {value: "-likeCount", text: "Most liked"}, {value: "-price", text: "Price high"}, {value: "price", text: "Price low"}, {value: "video", text: "Video"}, {value: "featured", text: "We recommend"}]
+      each val in sortOptions
+        .col-xs-3
+          label.filter-button.filter-button-small.order
+            .child
+              input(style="font-size:8px;" ng-model="sort" type="radio" name="sort" value="#{val.value}")
+              | #{val.text}
+   .col-xs-3
+    form
+      - var sortOptions = [{value: "-id", text: "Most recent"}, {value: "-likeCount", text: "Most liked"}, {value: "-price", text: "Price high"}, {value: "price", text: "Price low"}, {value: "video", text: "Video"}, {value: "featured", text: "We recommend"}]
+      each val in sortOptions
+        .col-xs-6
+          label.filter-button.order
+            .child
+              input(ng-model="sort" type="radio" name="sort" value="#{val.value}")
+              | #{val.text}
+script.
+  $('.filter-button.gender').click(function() {
+    $('.filter-button.gender').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.filter-button.type').click(function() {
+    $('.filter-button.type').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.colour').click(function() {
+    $('.colour').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.filter-button.order').click(function() {
+    $('.filter-button.order').removeClass('active');
+    $(this).addClass('active');
+  });
+  $("#filterHandle").hoverIntent(
+    function(){
+      $("#filters").animate({bottom:'+=5px'},200);
+    },
+    function() {
+      $("#filters").animate({bottom:'-=5px'},200);
+    }
+  );
+  $("#filterHandle").click(function(event){
+    if ($('#filters').hasClass("isDown") ) {
+      $('#filters').stop().animate({bottom:'-=173px'}, 300, 'easeOutExpo');
+      $('#filters').removeClass("isDown");
+    } else {
+      $('#filters').stop().animate({bottom:'+=173px'}, 300, 'easeOutExpo');
+      $('#filters').addClass("isDown");
+    }
+    return false;
+  });

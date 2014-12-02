@@ -1,0 +1,36 @@
+include partials/vip-top
+.col-xs-3
+  include partials/vip-sidebar
+.col-xs-9
+  include partials/vip-top-sub
+  #vipAccountInvitationContent
+    ul.list-inline.pull-right.menu.col-lg-12
+      li
+        a
+          |  Accept
+      li
+        a
+          | Ignore
+      li
+        .form
+          input(type="checkbox")
+    .clearfix
+    ul.messages(ng-controller="accountCtrl")
+      li.media(ng-repeat="person in people | orderBy:random") 
+        a.pull-left
+          img.media-object(ng-src='{{person.img}}')
+        .media-body
+          h4.col-lg-4.media-heading
+            | {{person.name}}
+          ul.info.pull-right.list-inline
+            li.date
+              | 23 July
+            li
+              form
+                input(type = "checkbox")
+          .clearfix
+          p.title
+            | {{person.role}}
+        .btn-group
+          button.accept Accept
+          button.ignore Ignore

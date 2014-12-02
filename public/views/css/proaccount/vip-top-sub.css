@@ -1,0 +1,71 @@
+#vip-sub {
+  font-family: 'PT Sans';
+  margin-top: 110px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#vip-sub .menu {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #d8d8d8;
+}
+#vip-sub .menu button {
+  border: none;
+  padding: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+#vip-sub .menu button.compse {
+  background: transparent url("/assets/images/pro/icon-compose.png") center right no-repeat;
+  padding-right: 30px;
+}
+#vip-sub .menu button.addon {
+  height: 31px;
+  background: #e4e5e5;
+}
+#vip-sub .menu input {
+  padding: 5px;
+}
+#vip-sub .menu li {
+  padding-left: 30px;
+}
+#vip-sub .menu li a {
+  color: #868686;
+  font-weight: 600;
+  text-decoration: none;
+}
+#vip-sub .menu li a .trash-img {
+  margin-right: 3px;
+  display: inline-block;
+  height: 20px;
+  width: 60px;
+  padding-left: 25px;
+  background: url("/assets/images/trash.jpg") 0% -5px no-repeat;
+}
+#vip-sub .menu li a .archive {
+  margin-right: 3px;
+  display: inline-block;
+  height: 20px;
+  width: 60px;
+  padding-left: 25px;
+  background: url("/assets/images/archive.png") 0% 3px no-repeat;
+}
+#vip-sub .menu li:first-child {
+  padding-left: 0;
+}
+#vip-sub .menu select {
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  font-weight: 600;
+  margin-top: 5px;
+  width: 103px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  background: transparent url("/assets/images/shape-2.png") right center no-repeat;
+}
+#vip-sub .menu select.more {
+  width: 45px;
+  color: #868686;
+  background-position: right center;
+}

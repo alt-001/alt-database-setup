@@ -1,0 +1,40 @@
+#vipSidebar(ng-controller="accountCtrl")
+  .profile
+    .info
+      .col-xs-4.headshot
+        img.img-responsive(ng-src="/assets/images/pro/b7.jpg")
+        button.user-profile Edit
+      .col-xs-8.details
+        h3.name Zhe Wang
+        p.intro Founder at alovelything.com
+        p.role Buyer
+        p.connections 
+          span.count 10
+          a(href="/account/myconnections").connections Connections
+    .clearfix      
+    .about
+      p I am a designer, fashion photographer. em Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+  .recommend
+    h3 You may also know
+    #carousel.carousel.slide(data-ride="carousel")
+      .carousel-inner
+        .item.active
+          ul.list-inline
+            li.col-xs-3(ng-repeat="person in people | orderBy:random | limitTo:quantity4") 
+              a(href="/account/otherprofile")
+                img.img-responsive(ng-src="{{person.img}}")
+              .infowrapper
+                h4.name {{person.name}}
+                p.role {{person.role}}
+        .item
+          ul.list-inline
+            li.col-xs-3(ng-repeat="person in people | orderBy:random | limitTo:quantity4") 
+              a(href="/account/otherprofile")
+                img.img-responsive(ng-src="{{person.img}}")
+              .infowrapper
+                h4.name {{person.name}}
+                p.role {{person.role}}
+      a.left.carousel-control(href='#carousel' role='button' data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+      a.right.carousel-control(href='#carousel' role='button' data-slide='next')
+        span.glyphicon.glyphicon-chevron-right

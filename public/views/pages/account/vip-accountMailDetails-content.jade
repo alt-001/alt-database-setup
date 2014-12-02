@@ -1,0 +1,61 @@
+include partials/vip-top
+.col-xs-3
+  include partials/vip-sidebar
+.col-xs-9
+  include partials/vip-top-sub
+  #vipAccountMailDetailsContent
+    ul.list-inline.menu.col-xs-6.pull-right
+      li.pull-right
+        a
+          | Next
+      li.pull-right
+        a(href="/account/compose")
+          span.reply
+            | Reply
+    .media.col-xs-6
+      a.pull-left
+        img.media-object(ng-src='/assets/images/pro/p5.jpg')
+      .media-body
+        h4.col-xs-4.media-heading
+          | Su Liang
+        .clearfix
+        p.title
+          | Hello from C14
+      p.timestamp
+        | 23.july.2014 9:10 am
+    ul.messages
+      li.history-messages
+        h4.title.col-xs-4 
+          | Su Liang
+        p.timestamp.col-xs-8
+          | 23.july.2014 9:10 am
+        p.desc.col-xs-12
+          | Hey man, Hope all well,Last night I was having a gchat with my friend. Parts of that is all... 
+        p.reply.col-xs-12
+          | Reply
+      li.history-messages
+        h4.title.col-xs-4 
+          | Zhe Wang
+        p.timestamp.col-xs-8
+          | 23.july.2014 9:10 am 
+        p.desc.col-xs-12
+          | No worries, I have contacted Sisi yesterday, I think she will be able to make it on 7 July, But...
+        p.reply.col-xs-12
+          | Reply
+      li.show-full.history-messages
+        h4.title.col-xs-4 
+          | Su Liang
+        p.timestamp.col-xs-8
+          | 23.july.2014 9:10 am
+        p.desc.col-xs-12
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Have a great day.
+        p.reply.col-xs-12
+          | Reply
+    textarea
+    .clearfix
+    button.cancel discard
+    button.submit send
+script.
+  $(document).on("click", ".history-messages", function () {
+    $( this ).toggleClass( "show-full" ).siblings().removeClass('show-full');
+  });

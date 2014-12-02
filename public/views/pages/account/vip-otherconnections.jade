@@ -1,0 +1,28 @@
+include partials/vip-top
+.col-xs-3
+  include partials/vip-sidebar-other-connected
+.col-xs-9
+  #vipMyConnectionsContent
+    .top-bar
+      .col-xs-8.top-bar-header
+        | his Connections
+      .col-xs-4
+        form(ng-model="vipSearch")
+          .col-xs-8.pull-right
+            input.search(type='text' placeholder='Search').col-xs-10
+            button(type="submit").addon.col-xs-2
+              span.glyphicon.glyphicon-search
+    .connections(ng-controller="accountCtrl")
+      .col-xs-4(ng-repeat="person in people | orderBy:random" style="margin-bottom:40px;") 
+        .media
+          a.pull-left(href='#')
+            img.media-object(ng-src='{{person.img}}')
+          .media-body
+            h4.media-heading {{person.name}}
+            | {{person.role}}
+    .clearfix
+    ul.pager
+      li.previous.disabled
+        a(href='#') Previous
+      li.next
+        a(href='#') Next

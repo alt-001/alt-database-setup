@@ -1,0 +1,31 @@
+#bottom-nav(ng-controller="loginCtrl")
+  #goup
+  .menu
+    .menu-block.hidden-xs.hidden-sm.col-md-4.col-lg-4
+      span.explore
+        a(href='/explore') explore
+      span.search
+        a(href='/search') search
+      span.showroom
+        a(href='/showroom') showroom
+    .menu-block.col-xs-4.text-center
+      span.signin(ng-show="!identity.isAuthenticated()")
+        a(href="#") Sign In
+      span.login(ng-show="identity.isAuthenticated()")
+        a(href="#") {{identity.currentUser.firstName + " " + identity.currentUser.lastName}}
+      span(ng-show="identity.isAuthenticated()")
+        a(href="#") {{identity.currentUser.gender}}
+      span.pro(ng-show="identity.currentUser.isPro()")
+        a(href="#") Pro
+      span.signout(ng-show="identity.isAuthenticated()")
+        a(href="#", ng-click="signout()") Sign Out
+      span.signout(ng-controller="productsCtrl" ng-show="identity.isAuthenticated()")
+        a(href="#", ng-click="reset()") Reset   
+    .menu-block.hidden-xs.hidden-sm.col-md-4.col-lg-4.text-right
+      span.follow(follow)
+        a(href='#' target="_self") follow
+      span.info
+        a(href='/info') info
+      span.language
+        a(href='#') 中文
+include partials/follow

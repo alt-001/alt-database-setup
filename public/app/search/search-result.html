@@ -1,0 +1,6 @@
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/product"><img ng-src="{{search.image}}" class="cover img-responsive"/></a></div>
+<div class="info col-xs-8 col-sm-8 col-md-8 col-lg-8">
+  <div class="product"><a href="/product">{{search.name | cut:true:15:'...'}}</a></div>
+  <div class="designer"><a href="/brand/story">by <b>{{search.designer}}</b></a></div>
+  <div class="price">{{search.price | currency: "£"}}</div>
+</div>

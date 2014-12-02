@@ -1,0 +1,36 @@
+#brand-sidebar
+  .title 
+    | byAMT
+  .misc
+    .col-xs-2.share
+      img.pull-left(src='/assets/images/share_icon.png' data-toggle="modal" data-target="#shareModal")
+    .col-xs-10.text-right
+      a.follow(href='/signin') Follow
+      a.message(href='' data-toggle="modal" data-target="#myModal") Message
+    .clearfix
+  .brand-info
+    | New York-based design studio byAMT creates jewelry, home goods, and furniture that tweak expectations and invite.
+  .brand-menu(ng-controller="brandChapterCtrl")
+    .col-xs-12.text-right
+      ul
+        li(ng-repeat="chapter in chapters" ng-class="navClass('{{chapter.name}}')")
+          a(href='{{chapter.url}}' style="text-transform: capitalize") {{chapter.name}}
+          ul#productExpand(ng-show="isProduct()")
+            li(ng-repeat="sub in chapter.sub" ng-class="navClass('{{sub.name}}')")
+              a(href='{{sub.url}}' style="text-transform: capitalize") {{sub.name}}
+  #myModal.modal.fade(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button" data-dismiss="modal")
+              span(aria-hidden="true") &times;
+              span.sr-only Close
+            h4#myModalLabel.modal-title Send a lovely message
+          .modal-body
+            input(type="text" placeholder="To").col-xs-12
+            input(type="text" placeholder="Enter a subject").col-xs-12
+            textarea(placeholder="Type a message").col-xs-12
+          .modal-footer
+            button.btn.btn-default(type="button" data-dismiss="modal") Close
+            button.btn.btn-primary(type="button") Submit
+  include share-btn

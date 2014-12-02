@@ -1,0 +1,31 @@
+#vip-sub
+  .menu
+    .col-xs-4
+      form(action="/account/compose")
+        button.compse Compose
+    .col-xs-3
+      form(ng-model="vipSearch")
+          .col-xs-12.pull-right
+            input.search(type='text' placeholder='Search').col-xs-10
+            button(type="submit").addon.col-xs-2
+              span.glyphicon.glyphicon-search
+    .col-xs-5
+      ul.list-inline.pull-right
+        li
+          a(href="#")
+            span.archive
+              | Archive
+        li
+          a(href="#")
+            span.trash-img
+              | Trash
+        li
+          form(ng-model="vipInboxSort")
+            select(onchange="location = this.options[this.selectedIndex].value;")
+              option(value="") All Messages
+              option(value="/account/invite") Invitations
+              option(value="") Sent
+        li
+          form
+            input(type="checkbox")
+  .clearfix

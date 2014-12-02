@@ -1,0 +1,69 @@
+#signin-sidebar.col-xs-4
+  .login
+    div.login-title.row
+      .col-xs-6
+        .title LOG IN
+      .col-xs-6.text-right
+        .forget Forgot password ?
+    .clearfix
+    div.row
+      input.email.col-xs-12(name='email' type='email' placeholder='EMAIL' required='required')
+      span.email-style
+      input.password.col-xs-12(name='password' type='password' placeholder='PASSWORD' required='required')
+      span.password-style
+      .col-xs-6
+        input.submit(type='submit' value="Go")
+      .col-xs-6
+        label.pull-right
+          input.password(name='remember' type='checkbox')
+          | Remember password
+  .signup
+    div
+      .title JOIN THE COMMUNITY
+      .member
+        .social-login.row
+          .col-xs-4
+            span Sign in with:
+          .col-xs-8
+            ul.social
+              li
+                a.twitter(href='#')
+                  img(src='/assets/images/mobile_twitter.png')
+              li  
+                a.facebook(href='#')
+                  img(src='/assets/images/mobile_facebook.png')
+              li
+                a.pinterest(href='#')
+                  img(src='/assets/images/mobile_pinterest.png')
+              li
+                a.weibo(href='#')
+                  img(src='/assets/images/mobile_weibo.png')
+        .local-signin
+          .local-signin-title or with email address
+          .col-xs-6
+            input.col-xs-10.fname(name='fname' type='text' placeholder='FIRST NAME' required='required')
+            span.first-name-style
+          .col-xs-6
+            input.col-xs-10.lname(name='lname' type='text' placeholder='LAST NAME' required='required')
+            span.last-name-style
+          .col-xs-12
+            input.col-xs-8.email(name='email' type='email' placeholder='EMAIL' required='required')
+            span.email-style
+          .col-xs-12
+            input.col-xs-8.password(name='password' type='password' placeholder='PASSWORD' required='required')
+            span.password-style
+          .col-xs-6
+            label
+              input.man(name='man' type='checkbox')
+              | Man's fashion
+          .col-xs-6
+            label
+              input.woman(name='woman' type='checkbox')
+              | Woman's fashion
+          label
+            input.password(name='man' type='checkbox')
+            | Receive our newsletter and recommendation?
+      .vip.col-xs-12
+        input.submit.col-xs-4(type='submit' value="JOIN")
+        .col-xs-8.text-right.register
+          a(href="") REGISTER VIP ACCOUNT

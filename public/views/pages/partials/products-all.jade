@@ -1,0 +1,28 @@
+#products(ng-controller="productsCtrl")
+  ul(masonry)
+    li.masonry-brick.col-xs-12.col-sm-6.col-md-4.col-lg-3(ng-repeat="product in products | orderBy:'id'" hover-show) 
+      a(href='/product')
+        img.product-cover.img-responsive(ng-src="{{product.image}}")
+      .tag
+        .col-xs-2
+          .tag-trigger
+            img(src='/assets/images/tag.png')
+        .col-xs-10
+          .tag-info
+            .col-xs-12
+              .col-xs-9
+                a(href='/product')
+                 | {{product.name}}
+              .col-xs-3.text-right
+                | {{product.price | currency: "£"}}
+            .col-xs-12
+              i from 
+              a(href='/brand/products/all')
+               | {{product.brand}}
+            .col-xs-12
+              .col-xs-6
+                button.small-button Add to Cart
+              .col-xs-6
+                img.pull-right.love(src='/assets/images/lovely_icon.png')
+                img.pull-right.share(src='/assets/images/share_icon.png' data-toggle="modal" data-target="#shareModal")
+  include share-btn

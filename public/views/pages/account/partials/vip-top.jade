@@ -1,0 +1,52 @@
+#vipTop
+  .col-xs-6
+    ul.list-inline
+      li myVIP.
+      li
+        a(href="/account/love-products") love
+      li
+        a.active(href="/account/cart") cart
+      li
+        a(href="/account/order") order
+      li
+        a(href="/account/profile") profile
+      li
+        a(href="/account/recentnews") Connection
+  .col-xs-6.text-right
+    .contact
+      .btn-group
+        button.msg.dropdown-toggle(data-toggle="dropdown") Message
+        ul.dropdown-menu
+          li.media
+            a(href="/account/inbox").pull-left
+              img.media-object(ng-src='/assets/images/pro/p5.jpg')
+            .media-body
+              h4.media-heading
+                | Kristine
+                span.date.pull-right 23 july
+              p.title
+                | Hello! How are you
+            p.msg
+              |Hello Zhe, Thank you for accepting my invitation. If you will need team of great web designers...
+          li.media
+            a(href="/account/inbox").pull-left
+              img.media-object(ng-src='/assets/images/pro/p7.jpg')
+            .media-body
+              h4.media-heading
+                | Haizhen Wang
+                span.date.pull-right 28 july
+              p.title
+                | Fashion week
+            p.msg
+              |Hello Zhe, Thank you for accepting my invitation. If you will need team of great web designers...
+            
+          li.footer
+            p.unread.col-lg-8 
+              | Unread messages (2)
+            p.compose.pull-right 
+              | Compose
+        button Chat Online
+    .welcome
+      | lovely to meet,
+      b
+        | z wang

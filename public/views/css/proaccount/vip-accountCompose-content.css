@@ -1,0 +1,42 @@
+#vipAccountComposeContent {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-family: 'PT Sans';
+  margin-top: 20px;
+}
+#vipAccountComposeContent form .title {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+#vipAccountComposeContent form input,
+#vipAccountComposeContent form textarea {
+  height: 30px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  background-color: #fafafa;
+  border: 1px solid #b8b8b8;
+  border-radius: 2px;
+}
+#vipAccountComposeContent form textarea {
+  height: 150px;
+  resize: none;
+}
+#vipAccountComposeContent form .btn-group button {
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #646464;
+  font-size: 12px;
+  padding: 2px;
+  text-align: center;
+  width: 63px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: #e6e6e6;
+  font-weight: 800;
+  border: 0;
+}
+#vipAccountComposeContent form .btn-group button.send {
+  background-color: #646464;
+  color: #fff;
+}

@@ -1,0 +1,73 @@
+doctype html
+html(ng-app="alt")
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(charset="utf-8")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui")
+    meta(name="apple-mobile-web-app-title" content="ALT")
+    title alt. [ a lovely thing ]
+    //- general
+    link(rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/views/css/general/fonts.css')
+    link(rel='stylesheet' href='/views/css/general/normalize.css')
+    //- plugin
+    link(rel='stylesheet' href='/views/css/plugins/jquery.fancybox.css')
+    link(rel='stylesheet' href='/views/css/plugins/video-js.css')
+    //- link(rel='stylesheet' href='/views/css/plugins/bootstrap-spinner.css')
+    //- global
+    link(rel='stylesheet' href='/views/css/general/top-nav.css')
+    link(rel='stylesheet' href='/views/css/general/bottom-nav.css')
+    link(rel='stylesheet' href='/views/css/general/products.css')
+    link(rel='stylesheet' href='/views/css/general/filter.css')
+    link(rel='stylesheet' href='/views/css/general/signup.css')
+    link(rel='stylesheet' href='/views/css/general/follow.css')
+    //- brand style
+    link(rel='stylesheet' href='/views/css/brand/brand-sidebar.css')
+    link(rel='stylesheet' href='/views/css/brand/brand-chapter.css')
+    //- account style
+    link(rel='stylesheet' href='/views/css/account/account-top.css')
+    link(rel='stylesheet' href='/views/css/account/love-brand.css')
+    link(rel='stylesheet' href='/views/css/account/profile.css') 
+    link(rel='stylesheet' href='/views/css/account/order.css')
+    link(rel='stylesheet' href='/views/css/account/cart.css')
+    //- Pro account style
+    link(rel='stylesheet' href='/views/css/proaccount/vip-sidebar.css')
+    link(rel='stylesheet' href='/views/css/proaccount/vip-top.css')
+    link(rel='stylesheet' href='/views/css/proaccount/vip-top-sub.css')
+    link(rel='stylesheet' href='/views/css/proaccount/vip-myConnections-content.css')
+    link(rel='stylesheet' href='/views/css/proaccount/vip-recentNews-content.css')
+    link(rel='stylesheet' href='/views/css/proaccount/vip-otherMemberProfile-content.css')
+    link(rel='stylesheet' href='/views/css/proaccount/vip-accountInbox-content.css')
+    link(rel='stylesheet' href='/views/css/proaccount/vip-accountCompose-content.css')
+    link(rel='stylesheet' href='/views/css/proaccount/vip-accountInvitation-content.css')
+    link(rel='stylesheet' href='/views/css/proaccount/vip-accountMailDetails-content.css')
+    //- Info
+    link(rel='stylesheet' href='/views/css/info/info.css')
+    link(rel='stylesheet' href='/views/css/info/info-top.css')
+    //- Product-detail
+    link(rel='stylesheet' href='/views/css/product-detail/product-sidebar.css')
+    link(rel='stylesheet' href='/views/css/product-detail/product-detail.css')
+    //- signup
+    link(rel='stylesheet' href='/views/css/signup/signin-sidebar.css')
+    //- search
+    link(rel='stylesheet' href='/views/css/general/search.css')
+    //- showroom
+    link(rel='stylesheet' href='/views/css/general/showroom.css')
+    //- explore
+    link(rel='stylesheet' href='/views/css/general/explore.css')
+
+    link(rel="stylesheet" href="/vendor/angularjs-toaster/toaster.css")
+
+    body
+      include currentUser
+      toaster-container(toaster-options="{'time-out': 3000, 'close-button':true}")
+      header
+        include navs/top-nav
+      section#main
+        div(ng-view)
+      footer
+        include navs/bottom-nav  
+      include scripts

@@ -1,0 +1,61 @@
+#vipAccountInvitationContent {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  color: #000;
+  font-size: 13px;
+  font-family: 'PT Sans';
+}
+#vipAccountInvitationContent .menu {
+  text-align: right;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d8d8d8;
+}
+#vipAccountInvitationContent .menu li {
+  padding-left: 40px;
+}
+#vipAccountInvitationContent .menu li a {
+  color: #949494;
+  font-weight: 100;
+  text-decoration: none;
+}
+#vipAccountInvitationContent .menu li:first-child {
+  padding-left: 0;
+}
+#vipAccountInvitationContent .messages {
+  margin-top: 20px;
+  font-weight: 600;
+}
+#vipAccountInvitationContent .messages li.media {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d8d8d8;
+}
+#vipAccountInvitationContent .messages li.media a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+#vipAccountInvitationContent .messages li.media h4 {
+  font-weight: 600;
+}
+#vipAccountInvitationContent .messages li.media img {
+  width: 100px;
+}
+#vipAccountInvitationContent .messages .btn-group button {
+  margin-top: 1%;
+  margin-right: 10px;
+  color: #646464;
+  font-size: 12px;
+  padding: 2px;
+  text-align: center;
+  width: 63px;
+  height: 26px;
+  border-radius: 2px;
+  background-color: #e6e6e6;
+  font-weight: 800;
+  border: 0;
+}
+#vipAccountInvitationContent .messages .btn-group button.accept {
+  background-color: #646464;
+  color: #fff;
+}

@@ -1,0 +1,167 @@
+#vipTop {
+  height: 100px;
+  width: 100%;
+  background-color: #000;
+  font-size: 15px;
+  color: #929292;
+  position: fixed;
+  z-index: 2;
+  font-family: 'PT Sans';
+}
+#vipTop ul {
+  margin-top: 68px;
+}
+#vipTop ul.dropdown-menu {
+  margin-top: 0;
+}
+#vipTop ul.list-inline {
+  margin-left: 4%;
+  font-size: 18px;
+  font-weight: 700;
+}
+#vipTop ul.list-inline li {
+  color: #fff;
+  font-weight: 600;
+}
+#vipTop ul.list-inline li a {
+  color: #929292;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 100;
+  padding: 0 15px;
+  padding-bottom: 2px;
+}
+#vipTop ul.list-inline li:active,
+#vipTop ul.list-inline li :hover {
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+#vipTop ul.list-inline li:last-child a {
+  color: #fff;
+}
+#vipTop .btn-group button {
+  margin-top: 20px;
+  margin-right: 20px;
+  color: #000;
+  text-align: left;
+  font-size: 11px;
+  padding-top: 4px;
+  padding-left: 10px;
+  width: 100px;
+  height: 25px;
+  border-radius: 2px;
+  background: #a0a0a0 url("/assets/images/speechbubble.png") 92% 5px no-repeat;
+  font-weight: 300;
+  border: 0;
+}
+#vipTop .btn-group button:hover {
+  color: #fff;
+  background: #3c3c3c url("/assets/images/speechbubble_hover.png") 92% 5px no-repeat;
+  transition: all 0.3s ease-in-out 0s;
+}
+#vipTop .btn-group button.msg {
+  width: 90px;
+  background: #d1d1d1 url("/assets/images/pro/icon-message.png") 88% 6px no-repeat;
+}
+#vipTop .btn-group button.msg:hover {
+  color: #000;
+  background: #d1d1d1 url("/assets/images/pro/icon-message.png") 88% 6px no-repeat;
+  transition: all 0.3s ease-in-out 0s;
+}
+#vipTop .btn-group button.msg:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+#vipTop .welcome {
+  margin-top: 25px;
+  margin-right: 20px;
+  text-align: right;
+}
+#vipTop .welcome b {
+  color: #fff;
+  margin-left: 5px;
+}
+#vipTop .dropdown-menu {
+  border-radius: 0;
+  border: 4px solid #000;
+  width: 300px;
+  left: -89%;
+  transition: all 0.2s ease-in-out;
+}
+#vipTop .dropdown-menu li {
+  border-bottom: 1px solid #c9c9c9;
+  margin-top: 0;
+  padding: 5px;
+  padding-top: 8px;
+}
+#vipTop .dropdown-menu li:first-child {
+  padding-top: 0;
+}
+#vipTop .dropdown-menu li:last-child {
+  padding-top: 0;
+}
+#vipTop .dropdown-menu li a {
+  padding: 5px;
+}
+#vipTop .dropdown-menu li a img {
+  width: 39px;
+  border: 1px solid #929292;
+}
+#vipTop .dropdown-menu li .media-body {
+  width: 215px;
+}
+#vipTop .dropdown-menu li .media-body .media-heading {
+  font-family: 'PT Sans';
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 10px;
+}
+#vipTop .dropdown-menu li .media-body .title {
+  font-family: 'Source Sans Pro';
+  font-weight: 100;
+  font-size: 14px;
+}
+#vipTop .dropdown-menu li .media-body .title .pull-left {
+  margin-right: 0;
+}
+#vipTop .dropdown-menu li p {
+  text-align: left;
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 4px;
+  font-family: 'Source Sans Pro';
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+#vipTop .dropdown-menu li .media-heading,
+#vipTop .dropdown-menu li .date,
+#vipTop .dropdown-menu li .title {
+  font-size: 12px;
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+  margin-top: 15px;
+}
+#vipTop .dropdown-menu li .title {
+  margin: 0;
+  font-weight: 500;
+}
+#vipTop .dropdown-menu li .date {
+  margin: 0;
+}
+#vipTop .dropdown-menu li.footer {
+  border: 0;
+  font-size: 14px;
+  color: #000;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#vipTop .dropdown-menu li.footer p {
+  margin: 10px 0;
+  font-family: 'PT Sans';
+  font-weight: 800;
+}
+#vipTop .dropdown-menu li.footer p.compose {
+  background: url("/assets/images/pro/icon-compose.png") right center no-repeat;
+  padding-right: 30px;
+}

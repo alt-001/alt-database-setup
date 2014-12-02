@@ -1,0 +1,74 @@
+include partials/account-top
+#cart
+  #cartSiderbar.col-xs-3
+    .subtotal
+      .title Order Subtotal 
+      .amount £898.00
+    .shipping
+      .title shipping
+      .amount.no-margin £0.00
+      .note.need-margin Qualify for Free shipping :)
+    .total
+      .title Total
+      .amount £898.00
+    a(href="#")
+      button.checkout Check out
+    a(href="#")
+      button.back-to-shop Back to Shop
+    .misc
+      .share-wrapper.col-xs-12
+        a(href='#')
+          img(src='/assets/images/fb.png')
+        a(href='#')
+          img(src='/assets/images/twitter_2.png')
+        a(href='#')
+          img(src='/assets/images/email-icon.png')   
+      .clearfix
+    .problems
+      p 
+        b Problems?
+      p.no-margin Contact our customer service team on
+      p.no-margin +44(0) 20 3510 0670
+      p.no-margin (available Monday+Friday, 9am-4pm GMT)
+  #cartProducts.col-xs-9(ng-controller="accountCtrl")
+    ul.container-fluid
+      li.col-xs-6(ng-repeat="cart in carts")
+        .cart-info-header.col-xs-12
+          .col-xs-8
+            .reservation-id
+            p 
+              b.text-uppercase  Reservation-id # 
+              {{cart.id}}
+          .col-xs-4
+            button.remove.pull-right Remove&nbsp;&nbsp;X
+        .col-xs-12
+          .col-xs-6.cart-thumb
+            a(href='/product')
+              img.product-cover.img-responsive(ng-src="{{cart.img}}")
+          .col-xs-6
+            .col-xs-12
+              .brand.text-uppercase
+                a(href='/brand')
+                  b {{cart.brand}}
+            .col-xs-12
+              .product.text-uppercase.need-margin
+                a(href='/product')
+                 | {{cart.product}}
+            .col-xs-12.text-uppercase
+              b.colour
+               | Colour: [{{cart.colour}}]
+            .col-xs-12.text-uppercase
+              b.size
+               | Size: [{{cart.size}}]
+            .col-xs-12.text-uppercase.need-margin
+              b.quantity
+               | Quantity: [{{cart.quantity}}]
+            .col-xs-12.need-margin.enlarge
+              b.subtotal.text-uppercase
+                | Subtotal: {{cart.price | currency: "£"}}
+            .col-xs-12.text-uppercase
+              .shipping
+                button.title
+                  b Shipping cost (Estimate)
+                .amount Royal mail 1st class: £7.89
+            .clearfix

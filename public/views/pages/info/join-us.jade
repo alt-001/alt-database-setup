@@ -1,0 +1,62 @@
+include partials/info-top
+.info-wrapper.col-xs-12#joinUs(ng-controller="dummyCtrl")
+  .tabs
+    ul.nav.nav-tabs(role="tablist")
+      li
+        a.tab.active(href='#tabBrand' role="tab" data-toggle="tab" target="_self") Open brand account
+      li
+        a.tab(href='#tabPro' role="tab" data-toggle="tab" target="_self") Open Pro account
+      li
+        a.tab(href='#tabCareer' role="tab" data-toggle="tab" target="_self") Career Opportunity
+      li
+        a.tab(href='#moreInfo' role="tab" data-toggle="tab" target="_self")  further information
+    .tab-content
+      #tabBrand.tab-pane.fade.active
+        p {{dummy3p}}
+        a(href="") 
+          > Download company application
+        .clearfix
+        a(href="") 
+          > Apply for a Brand account
+        .clearfix
+        a(href="") 
+          > Contact for further information
+      #tabPro.tab-pane.fade
+        p {{long}}
+        a(href="") 
+          > Download company application
+        .clearfix
+        a(href="") 
+          > Apply for a Pro account
+        .clearfix
+        a(href="") 
+          > Contact for further information
+      #tabCareer.tab-pane.fade
+        .panel-group#accordion(role="tablist" aria-multiselectable="true")
+          .panel.panel-default
+            .panel-heading#headingOne(role="tab")
+              .panel-title
+                a(data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" target="_self")
+                  | Job vacancies one
+            .panel-collapse.collapse.in#collapseOne(role="tabpanel" aria-labelledby="headingOne")
+              .panel-body
+                p {{long}}
+          .panel.panel-default
+            .panel-heading#headingTwo(role="tab")
+              .panel-title
+                a(data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" target="_self")
+                  | Job vacancies Two
+            .panel-collapse.collapse#collapseTwo(role="tabpanel" aria-labelledby="headingTwo")
+              .panel-body
+                p {{medium}}
+      #moreInfo.tab-pane.fade
+        input(type="text" placeholder="Name").col-xs-7
+        input(type="text" placeholder="email").col-xs-7
+        input(type="text" placeholder="Enter a subject").col-xs-7
+        textarea(placeholder="Type a message").col-xs-7
+        .clearfix
+        .btn-group
+          button(type="submit").send Send
+          button Cancel
+script.
+  $('.nav-tabs a:first').tab('show');

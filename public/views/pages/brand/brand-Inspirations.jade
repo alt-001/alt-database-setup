@@ -1,0 +1,8 @@
+.col-xs-3
+  include partials/brand-sidebar
+.col-xs-9
+  #traces(ng-controller="brandInspirationCtrl")
+    ul(masonry)
+      li.masonry-brick.col-xs-4(ng-repeat="inspiration in inspirations | orderBy:'id'")
+        a.fancybox(id="{{inspiration.id}}" href="{{inspiration.image}}" rel="gallery" data-fancybox-group="gallery" title="{{inspiration.text}}" fancybox="{openEffect : 'elastic', closeEffect : 'elastic',helpers : {title : {type : 'outside'}}}")
+          img.img-responsive( ng-src="{{inspiration.image}}")

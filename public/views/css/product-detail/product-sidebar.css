@@ -1,0 +1,148 @@
+#product-sidebar {
+  font-family: "PT Sans" "Source Sans Pro";
+  padding-bottom: 60px;
+}
+#product-sidebar a {
+  color: #808080;
+}
+#product-sidebar a:hover {
+  color: #000;
+  text-decoration: none;
+}
+#product-sidebar .zoom {
+  padding: 0;
+}
+#product-sidebar .zoom .cover {
+  width: 100%;
+  position: relative;
+}
+#product-sidebar .zoom .cover img {
+  width: 100%;
+}
+#product-sidebar .zoom .carousels {
+  padding-bottom: 10px;
+  border-top: 1px solid #d6d6d6;
+  background: #f4f4f4;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+#product-sidebar .zoom .carousels .carousel-inner .item {
+  left: -10px;
+}
+#product-sidebar .zoom .carousels .carousel-inner .item #gallery li {
+  margin: 0;
+  padding: 1%;
+}
+#product-sidebar .info {
+  margin-top: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+#product-sidebar .info .parent {
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+#product-sidebar .info .parent button {
+  border: none;
+  background-color: transparent;
+  background-repeat: none;
+  outline: none;
+}
+#product-sidebar .info .parent button:first-child {
+  margin-left: 15px;
+}
+#product-sidebar .info .parent input {
+  width: 30px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #babbba;
+}
+#product-sidebar .info .parent .child {
+  display: inline-block;
+  display: inline;
+  zoom: 1;
+  color: #000;
+  color: #929292;
+}
+#product-sidebar .info .parent .child li {
+  display: inline-block;
+  display: inline;
+  zoom: 1;
+  margin: 10px 20px 10px 20px;
+}
+#product-sidebar .info .parent .child li:first-child {
+  margin-left: 38px;
+}
+#product-sidebar .info .parent .child li:last-child {
+  margin-right: 0;
+}
+#product-sidebar .info .parent.size select {
+  outline: none;
+  font-size: 12px;
+  border: 1px solid #dadada;
+  background-color: transparent;
+  font-weight: 600;
+  padding: 3px 10px;
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  background: transparent url("/assets/images/shape-2.png") 96% center no-repeat;
+}
+#product-sidebar .info .parent.quantity {
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 20px;
+}
+#product-sidebar .info button {
+  font-family: "PT Sans" "Source Sans Pro";
+  margin-left: 16px;
+  width: 85%;
+  height: 35px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 2px;
+  border: none;
+  letter-spacing: 1px;
+}
+#product-sidebar .info button.addtocart {
+  background-color: #505050;
+  box-shadow: 0px 5px 0px 0px rgba(87,87,87,0.4);
+  text-shadow: 2px 3px 3px #727272;
+  color: #fff;
+}
+#product-sidebar .info button.buy {
+  box-shadow: 0px 5px 0px 0px rgba(18,18,18,0.4);
+  text-shadow: 0px 0px 2px #fff;
+  background-color: #c7c7c7;
+  color: #000;
+}
+#product-sidebar .info .smalllink {
+  text-align: left;
+  margin-left: 14px;
+  height: 40px;
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: 100;
+  text-decoration: underline;
+}
+#product-sidebar .info .smalllink p {
+  margin-bottom: 1px;
+  font-size: 12px;
+}
+#product-sidebar .info .smalllink p a {
+  color: #929292;
+  display: block;
+}
+#product-sidebar #gallery {
+  margin-left: 20px;
+}
+#product-sidebar #gallery li {
+  margin-left: 5px;
+}

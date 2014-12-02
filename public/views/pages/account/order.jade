@@ -1,0 +1,64 @@
+include partials/account-top
+#order(ng-controller="accountCtrl")
+  .order-wrapper.col-xs-11
+    .order-container
+      .col-xs-12.text-uppercase.order-header
+        .col-xs-6.order-no
+          b Order NO
+          p #381239812
+        .col-xs-6.pull-right
+          b 28/10/2013
+      .col-xs-8.order-thumb
+        .col-xs-6.order-thumb-cell(ng-repeat="cart in carts")
+          .col-xs-6
+            img.img-responsive(ng-src="{{cart.img}}")
+          .col-xs-6
+            a.text-uppercase.order-name(herf="#")
+              b {{cart.brand}}
+              br
+              p {{cart.product}}
+              | Price:{{cart.price | currency: "£"}}
+              br
+              | Colour:{{cart.colour}}
+              br
+              | SIZE: {{cart.size}}
+              br
+              | quantity:{{cart.quantity}}
+            b.text-uppercase
+              | item(s) subtotal: {{cart.price | currency: "£"}}
+      .col-xs-4.order-info
+        .col-xs-6
+          p.no-margin Delivery Charge: £0.00
+          p
+            b.text-uppercase.need-margin.total-price total: £1524.00
+          p.need-margin
+            b Status: 
+            b.text-uppercase ready to ship&nbsp;
+            br
+            a(herf="#")
+              u
+                i (click for details)
+          p.no-margin
+            b Credit earned:&nbsp;
+            | 75 points
+          p.no-margin 
+            b Discount received:&nbsp;
+            | 25%
+          br
+          a(herf="#")
+            &gt; download receipt?
+          br  
+          a(herf="#")
+            &gt; Make an exchange or refund?
+          br  
+          a(herf="#")
+            &gt; Edit payment &amp; delivery details?
+        .col-xs-6
+          b Payment details:
+          br
+          p.no-margin Card:xxxx xxxx xxxx 1234
+          p Expiry Date 10/16
+          b Payment details:
+          p 27 sunderland pint,1 hull place,London E16 2SN,
+          p.no-margin Phone:07402716667
+          p.no-margin Note to sender:N/A

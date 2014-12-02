@@ -1,0 +1,43 @@
+#vipAccountInboxContent {
+  margin-right: 20px;
+  margin-left: 20px;
+  color: #000;
+  font-size: 13px;
+  font-family: 'PT Sans';
+}
+#vipAccountInboxContent .messages {
+  font-weight: 600;
+}
+#vipAccountInboxContent .messages li.media {
+  margin-top: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d8d8d8;
+  background: #ececec;
+}
+#vipAccountInboxContent .messages li.media.unread {
+  background: transparent;
+}
+#vipAccountInboxContent .messages li.media a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+#vipAccountInboxContent .messages li.media h4 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+#vipAccountInboxContent .messages li.media p {
+  margin-bottom: 0;
+  font-weight: 100;
+}
+#vipAccountInboxContent .messages li.media img {
+  width: 70px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+#vipAccountInboxContent .messages li.media .desc {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  color: #868686;
+}

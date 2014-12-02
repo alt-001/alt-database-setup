@@ -1,0 +1,33 @@
+.signup-wrapper(ng-controller="loginCtrl" ng-hide='identity.isAuthenticated()')  
+  #signup
+    form
+      .title SIGN UP
+      .divider.with
+      input.email(placeholder='EMAIL' required='required' ng-model='username')
+      input.password(type='password' placeholder='PASSWORD' required='required' ng-model='password')
+      button.submit(ng-click='signin(username, password)') GO
+    .divider.or
+    .social
+      a(href='#')
+        img(src='/assets/images/signup_twitter.png')
+      a(href='#')
+        img(src='/assets/images/signup_facebook.png')
+      a(href='#')
+        img(src='/assets/images/signup_weibo.png')
+      a(href='#')
+        img(src='/assets/images/signup_pinterest.png')
+    p
+      | Already a member? Sign in 
+      a here
+      | .
+    button.close
+    .shadow
+
+script.
+  $("#signup").fadeIn(1000, 'easeOutExpo');
+  $("#signup .close").click(function(){
+    $(".signup-wrapper").fadeOut(1000, 'easeOutExpo');
+  });
+  $("#signup .submit").click(function(){
+    $(".signup-wrapper").fadeOut(1000, 'easeOutExpo');
+  });

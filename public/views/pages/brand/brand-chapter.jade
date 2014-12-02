@@ -1,0 +1,47 @@
+.col-xs-3
+  include partials/brand-sidebar
+.col-xs-9
+  #brandChapter(ng-controller="brandChapterCtrl")
+    img.img-responsive(width='100%', height='auto',ng-show="'{{onchapter}}' != 'story'" ng-src='/assets/images/brand/{{onchapter}}.jpg')
+    .video-wrapper(width='100%', height='auto',ng-show="'{{onchapter}}' == 'story'")
+      video.video-js.vjs-default-skin(controls preload="none" data-setup="{}" width='100%', height='700px', poster="/assets/images/brand/story.jpg")
+        source(src='/assets/images/brand/moment.mp4', type='video/mp4')
+    .clearfix
+    .info( ng-show="'{{onchapter}}' != 'moment'")
+      .col-xs-10
+        h3 byAMT
+      .col-xs-2.text-right.share
+        img.pull-right(src='/assets/images/share_icon.png' data-toggle="modal" data-target="#shareModal" style="opacity:.4;")
+      .clearfix          
+      p
+        | em Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      p
+        | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.weak expectations and invite delight.
+      .video-wrapper(width='100%', height='auto',ng-show="'{{onchapter}}' == 'talk'")
+        video.video-js.vjs-default-skin(controls preload="none" data-setup="{}" width='100%', height='600px', poster="/assets/images/brand/story.jpg")
+          source(src='/assets/images/brand/talk.mp4', type='video/mp4')
+      p
+        | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.weak expectations and invite delight.
+    #momentWrapper(ng-show="'{{onchapter}}' == 'moment'")
+      .carousels
+        #productCarousel1.carousel.slide
+          .carousel-inner
+            .item.active
+              ul(ng-controller="lookCtrl")
+                li(ng-repeat="item in look")
+                  a(href="") 
+                    .info-wrapper
+                      h4 {{item.name}}
+                      span {{item.price | currency: "£"}}
+                    img.pull-left.img-responsive(src="{{item.img}}")
+          a.left.carousel-control(href='#productCarousel1', role='button', data-slide='prev')
+            span
+          a.right.carousel-control(href='#productCarousel1', role='button', data-slide='next')
+            span
+      .buy-look
+        button Save the look
+        span.pull-right love the look  
+        .share-wrapper.pull-right    
+          a.pull-right(href='#' title='share the look' data-toggle="modal" data-target="#shareModal")
+            img(src='/assets/images/share_icon.png')
+    include partials/share-btn

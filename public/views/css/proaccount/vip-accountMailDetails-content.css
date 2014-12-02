@@ -1,0 +1,142 @@
+#vipAccountMailDetailsContent {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 60px;
+  color: #000;
+  font-size: 13px;
+  font-family: 'PT Sans';
+}
+#vipAccountMailDetailsContent .menu {
+  padding-bottom: 15px;
+}
+#vipAccountMailDetailsContent .menu li {
+  padding-left: 40px;
+  padding-right: 35px;
+  margin-top: 10px;
+}
+#vipAccountMailDetailsContent .menu li a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+#vipAccountMailDetailsContent .menu li a .reply {
+  margin-right: 10px;
+  display: inline-block;
+  height: 20px;
+  width: 22px;
+  padding-left: 30px;
+  background: url("/assets/images/reply.jpg") center left no-repeat;
+}
+#vipAccountMailDetailsContent .menu li:first-child {
+  padding-right: 0;
+}
+#vipAccountMailDetailsContent .menu li:last-child {
+  padding-right: 0;
+}
+#vipAccountMailDetailsContent .menu li select {
+  outline: none;
+  border: 0;
+  font-weight: 600;
+  color: #d3d3d3;
+  width: 50px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  background: transparent url("/assets/images/shape-2.png") 107% 1px no-repeat;
+}
+#vipAccountMailDetailsContent .media img {
+  width: 80px;
+}
+#vipAccountMailDetailsContent .media .media-body h4 {
+  font-size: 22px;
+  font-weight: 600;
+}
+#vipAccountMailDetailsContent .media .media-body .title {
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+#vipAccountMailDetailsContent .media .timestamp {
+  font-weight: 600;
+  font-size: 14px;
+  color: #b4b4b4;
+}
+#vipAccountMailDetailsContent .messages li {
+  height: 57px;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  border-bottom: 2px solid #d8d8d8;
+  padding: 10px;
+  width: 70%;
+  cursor: pointer;
+}
+#vipAccountMailDetailsContent .messages li.show-full {
+  height: auto;
+  background-color: transparent;
+  border-bottom: 0;
+}
+#vipAccountMailDetailsContent .messages li.show-full .desc {
+  font-weight: 500;
+  color: #646464;
+  width: 100%;
+  margin-top: 5px;
+  line-height: 1.6;
+}
+#vipAccountMailDetailsContent .messages li .timestamp {
+  color: #d3d3d3;
+  text-align: right;
+  margin-bottom: 0;
+}
+#vipAccountMailDetailsContent .messages li h4 {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 15px;
+}
+#vipAccountMailDetailsContent .messages li .desc {
+  font-weight: 100;
+  color: #a4a4a4;
+  line-height: 1.8;
+}
+#vipAccountMailDetailsContent .messages li .reply {
+  font-size: 12px;
+  margin-right: 10px;
+  text-align: right;
+  display: inline-block;
+  height: 20px;
+  background: url("/assets/images/reply.jpg") 94% -2px no-repeat;
+}
+#vipAccountMailDetailsContent .mail-img img {
+  width: 100%;
+  margin-bottom: 45px;
+}
+#vipAccountMailDetailsContent textarea {
+  resize: none;
+  margin-top: 20px;
+  width: 70%;
+  height: 200px;
+  background-color: #f6f6f6;
+  border: 1px solid #d8d8d8;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+#vipAccountMailDetailsContent textarea:focus {
+  outline: none;
+  border: 1px solid #d8d8d8;
+}
+#vipAccountMailDetailsContent .cancel {
+  margin-right: 10px;
+  background-color: #d3d3d3;
+  color: #808080;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 3px;
+}
+#vipAccountMailDetailsContent .submit {
+  background-color: #202020;
+  color: #fff;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 3px;
+}

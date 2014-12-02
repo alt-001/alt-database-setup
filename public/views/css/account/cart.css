@@ -1,0 +1,113 @@
+#cart {
+  font-family: "source sans pro" "PT Sans";
+}
+#cart a {
+  color: #000;
+}
+#cart .no-margin {
+  margin-bottom: 0;
+}
+#cart .need-margin {
+  margin-bottom: 20px;
+}
+#cart .enlarge {
+  font-size: 18px;
+}
+#cart #cartSiderbar {
+  font-family: "PT Sans";
+  padding: 40px;
+  padding-top: 0;
+  border-right: 1px solid #c2c2c2;
+  margin-top: 40px;
+}
+#cart #cartSiderbar .title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+#cart #cartSiderbar .amount {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+#cart #cartSiderbar .note {
+  color: #c2c2c2;
+}
+#cart #cartSiderbar button {
+  border: none;
+  width: 150px;
+  height: 36px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+#cart #cartSiderbar .checkout {
+  margin-top: 40px;
+  background-image: -moz-linear-gradient(90deg, #4e4e4e 0%, #7c7c7c 100%);
+  background-image: -webkit-linear-gradient(90deg, #4e4e4e 0%, #7c7c7c 100%);
+  background-image: -ms-linear-gradient(90deg, #4e4e4e 0%, #7c7c7c 100%);
+  box-shadow: 0.262px 4.993px 0px 0px rgba(87,87,87,0.294);
+  color: #fff;
+}
+#cart #cartSiderbar .back-to-shop {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-bottom: 40px;
+}
+#cart #cartSiderbar .misc {
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+#cart #cartSiderbar .misc img {
+  margin-right: 10px;
+}
+#cart #cartSiderbar .misc a {
+  color: #c2c2c2;
+}
+#cart #cartSiderbar .misc a:hover {
+  text-decoration: none;
+  color: #000;
+}
+#cart #cartSiderbar .problems p {
+  color: #c2c2c2;
+}
+#cart #cartSiderbar .problems p b {
+  color: #000;
+}
+#cart #cartProducts {
+  padding: 20px 10px;
+  margin-top: 20px;
+}
+#cart #cartProducts li {
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+#cart #cartProducts li .cart-info-header {
+  padding-bottom: 10px;
+}
+#cart #cartProducts li .cart-info-header .remove {
+  font-size: 12px;
+  border: none;
+  border-radius: 2px;
+  background-color: #000;
+  color: #fff;
+}
+#cart #cartProducts li .cart-thumb img {
+  width: 90%;
+}
+#cart #cartProducts li .cart-thumb button {
+  padding-left: 20px;
+  border: none;
+  text-decoration: underline;
+  background: #fff url("/assets/images/love-it.png") left center no-repeat;
+}
+#cart #cartProducts li .shipping .title {
+  border: 1px solid #000;
+  padding: 5px;
+  padding-right: 30px;
+  margin-bottom: 10px;
+  background: #fff url("/assets/images/shape-2.png") 95% center no-repeat;
+}

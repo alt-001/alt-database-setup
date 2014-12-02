@@ -1,0 +1,125 @@
+#product-zoom(ng-controller="productCtrl")
+  .col-xs-4
+    #product-sidebar
+      .zoom
+        .cover
+          img#onzoom(src='/assets/images/product-details/product1.jpg', data-zoom-image='/assets/images/product-details/product1_big.jpg')
+        .carousels
+          #productCarousel1.carousel.slide
+            .carousel-inner
+              .item.active
+                ul#gallery
+                  li.col-xs-2(ng-repeat="item in productThumb")
+                    a(href='#', data-image='{{item.medium}}', data-zoom-image='{{item.big}}')
+                      img#onzoom.img-responsive(ng-src='{{item.thumb}}' zoom)
+            .clearfix
+      .info
+        ul.parent.size
+          li.col-xs-3 Size
+          form.col-xs-9
+            select
+              option(ng-repeat="item in size" value="") {{item.size}}
+        .clearfix
+        ul.parent.quantity
+          li Quantity
+            .input-append.spinner.pull-right(data-trigger="spinner")
+              a.spin-down(href="javascript:;" data-spin="down" style="margin-right:10px;") -
+              input(type="text" value="1" data-rule="quantity")
+              a.spin-up(href="javascript:;" data-spin="up" style="margin-left:10px;") +
+        .row
+          .col-xs-6
+            button.addtocart Add to Cart
+          .col-xs-6
+            button.buy Buy
+          .col-xs-6.pull-left
+            .smalllink
+              p
+                a(href='#') Shipping, Exchange & Refund
+                a(href='#') Help & Contact
+          .clearfix
+  .col-xs-8
+    #product-details
+      .row
+        .col-xs-8
+          span.brand.pull-left
+            i From
+            a(href='/brand') {{brandName}}
+            button Follow
+          .share-wrapper.pull-left
+            img.pull-left.share(src='/assets/images/share_icon.png' data-toggle="modal" data-target="#shareModal" style="opacity:.3;")
+        .col-xs-4.text-right
+          button.chat_btn Chat Online
+      .details
+        .col-xs-8
+          .title 
+            {{productName}} 
+          .price 
+            {{price | currency: "£"}}
+          .vat
+            i VAT & Import duty incl.
+        .col-xs-4.text-right
+          ul.delivery
+            li Product code: 1234556
+            li Delivery & Returns: £5 UK. £10 ROW. Free return in UK.
+            li
+              img(src='{{qr}}')
+        .clearfix
+        .tabs
+          ul.nav.nav-tabs(role="tablist")
+            li.active
+              a.tab(href='#tab-desc' role="tab" data-toggle="tab" target="_self") Description
+            li
+              a.tab(href='#tab-notes' role="tab" data-toggle="tab" target="_self") Designer Notes
+            li
+              a.tab(href='#tab-advice' role="tab" data-toggle="tab" target="_self") Materials and Care Advice
+            li
+              a.tab(href='#tab-size' role="tab" data-toggle="tab" target="_self") Size Help
+          .tab-content
+            #tab-desc.tab-pane.active {{desc}}
+            #tab-notes.tab-pane {{notes}}
+            #tab-advice.tab-pane {{advice}}
+            #tab-size.tab-pane {{sizeHelp}}
+        .carousel-title More from 
+          a(href='/brandåå') {{brandName}}
+        .carousels(style="width:800px; height: auto; margin: 0 auto")
+          #productCarousel1.carousel.slide
+            .carousel-inner
+              .item.active
+                ul
+                  li(ng-repeat="item in carousel1" style="float: left")
+                    img(src="{{item.img}}")
+              .item
+                ul
+                  li(ng-repeat="item in carousel2" style="float: left")
+                    img(src="{{item.img}}")
+            a.left.carousel-control(href='#productCarousel1', role='button', data-slide='prev')
+              span
+            a.right.carousel-control(href='#productCarousel1', role='button', data-slide='next')
+              span
+        .clearfix
+        .carousel-title You may also like 
+        .carousels(style="width:800px; height: auto; margin: 0 auto")
+          #productCarousel2.carousel.slide
+            .carousel-inner
+              .item.active
+                ul
+                  li(ng-repeat="item in carousel2" style="float: left")
+                    img(src="{{item.img}}")
+              .item
+                ul
+                  li(ng-repeat="item in carousel1" style="float: left")
+                    img(src="{{item.img}}")
+            a.left.carousel-control(href='#productCarousel2', role='button', data-slide='prev')
+              span
+            a.right.carousel-control(href='#productCarousel2', role='button', data-slide='next')
+              span
+      .clearfix
+    include partials/share-btn
+script.
+  $('.nav-tabs a:first').tab('show');
+  $(".spinner")
+  .spinner('delay', 200) //delay in ms
+  .spinner('changed', function(e, newVal, oldVal){
+  })
+  .spinner('changing', function(e, newVal, oldVal){
+  });
